@@ -1,0 +1,309 @@
+/* Reset cơ bản và font */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background: #fff0f6; /* hồng nhạt */
+  color: #4a304b; /* tím đậm hơi hồng nhẹ */
+  line-height: 1.6;
+}
+
+/* Banner */
+.banner {
+  background: #f8bbd0; /* hồng pastel */
+  color: #5a2a3a; /* tím đậm */
+  padding: 20px;
+  text-align: center;
+  animation: bannerFadeIn 2s ease forwards; /* animation CSS3 */
+}
+
+@keyframes bannerFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Navbar */
+.navbar ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  background-color: #b67ca4; /* tím hồng nhạt */
+  border-radius: 5px;
+  overflow: hidden;
+  animation: navbarSlideIn 1s ease forwards; /* animation CSS3 */
+}
+
+@keyframes navbarSlideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.navbar ul li {
+  margin: 0 10px;
+}
+
+.navbar ul li a {
+  color: #fff0f6; /* hồng rất nhạt */
+  text-decoration: none;
+  padding: 10px 20px;
+  display: block;
+  transition: background 0.3s ease;
+  border-radius: 5px;
+}
+
+.navbar ul li a:hover {
+  background: #f48fb1; /* hồng đậm hơn khi hover */
+}
+
+/* Container chính dùng flex */
+.container {
+  display: flex;
+  padding: 20px;
+  gap: 20px;
+}
+
+/* Cột trái */
+.left_Side {
+  width: 35%;
+  background: #fff0f6; /* hồng nhạt */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(230, 180, 200, 0.3);
+  animation: fadeInLeft 1s ease forwards; /* animation */
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Cột phải */
+.right_Side {
+  width: 65%;
+  background: #fff0f6; /* hồng nhạt */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(230, 180, 200, 0.3);
+  animation: fadeInRight 1s ease forwards; /* animation */
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Ảnh cá nhân */
+.profileText .imgBx {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.profileText .imgBx img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 5px solid #f48fb1; /* viền hồng */
+  transition: transform 0.3s ease;
+}
+
+.profileText .imgBx img:hover {
+  transform: scale(1.05) rotate(5deg); /* hiệu ứng nhỏ khi hover */
+}
+
+/* Tên và chức danh */
+.profileText h2 {
+  text-align: center;
+  margin-top: 10px;
+  color: #5a2a3a;
+}
+
+/* Tiêu đề phần */
+.contactInfo .title,
+.about .title2 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #f48fb1; /* hồng pastel */
+  border-bottom: 2px solid #f48fb1;
+  padding-bottom: 5px;
+}
+
+/* Danh sách liên hệ và kỹ năng */
+.contactInfo ul li {
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+}
+
+.contactInfo ul li .icon {
+  width: 30px;
+  color: #f48fb1; /* icon màu hồng */
+  text-align: center;
+  font-size: 18px;
+}
+
+.contactInfo ul li .text a {
+  color: #5a2a3a;
+  text-decoration: none;
+}
+
+.contactInfo ul li .text a:hover {
+  text-decoration: underline;
+  color: #f48fb1;
+}
+
+/* Thanh kỹ năng và ngôn ngữ */
+.skills .percent {
+  background: #fce4ec; /* hồng nhạt hơn */
+  height: 6px;
+  border-radius: 5px;
+  margin-top: 5px;
+  overflow: hidden;
+  flex-grow: 1;
+  margin-left: 10px;
+}
+
+.skills .percent div {
+  height: 100%;
+  background: #f48fb1; /* hồng pastel */
+  animation: loadSkill 1s ease forwards;
+}
+
+@keyframes loadSkill {
+  from {
+    width: 0;
+  }
+  to {
+    width: var(--skill-width);
+  }
+}
+
+/* About sections (Mục tiêu, học vấn, kinh nghiệm, chứng chỉ, dự án) */
+.about {
+  margin-bottom: 25px;
+}
+
+.about .box {
+  margin-top: 10px;
+}
+
+.year_company {
+  display: flex;
+  justify-content: space-between;
+  color: #b67ca4;
+  font-weight: 600;
+}
+
+.year_company h5 {
+  font-size: 14px;
+}
+
+.text h4 {
+  font-size: 16px;
+  color: #5a2a3a;
+  margin-bottom: 5px;
+}
+
+.text p {
+  font-size: 14px;
+  color: #4a304b;
+}
+
+/* Danh sách sở thích */
+.hobby-list {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  font-size: 16px;
+  color: #5a2a3a;
+}
+
+.hobby-list li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.hobby-list li i {
+  color: #f48fb1;
+  font-size: 20px;
+}
+
+/* Responsive nhỏ hơn 768px */
+@media screen and (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .left_Side,
+  .right_Side {
+    width: 100%;
+  }
+
+  .navbar ul {
+    flex-wrap: wrap;
+  }
+
+  .navbar ul li {
+    margin: 5px 10px;
+  }
+}
+.contactInfo.skills ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.contactInfo.skills li {
+  margin-bottom: 15px;
+}
+
+.contactInfo.skills .text {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.contactInfo.skills .percent {
+  background: #e0e0e0;
+  border-radius: 10px;
+  height: 10px;
+  position: relative;
+  width: 100%; /* ✅ cố định chiều rộng */
+  overflow: hidden;
+}
+
+.contactInfo.skills .percent div {
+  background: #f48fb1;
+  height: 100%;
+  transition: width 1s ease-in-out;
+}

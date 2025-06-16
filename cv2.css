@@ -1,0 +1,130 @@
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: #ffe6f0;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #f28ab2;
+  color: #4b004f;
+  text-align: center;
+  padding: 20px 10px;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+nav li {
+  margin: 10px 15px;
+  padding: 5px 10px;
+  background-color: #d36ca5;
+  color: white;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 20px;
+}
+
+.left {
+  flex: 1;
+  min-width: 250px;
+  max-width: 300px;
+  background-color: #fff0f5;
+  padding: 20px;
+  margin-right: 20px;
+  border-radius: 10px;
+}
+
+.left img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  display: block;
+  margin: auto;
+}
+
+.left ul {
+  list-style: none;
+  padding: 0;
+}
+
+.right {
+  flex: 2;
+  background-color: #ffeaf4;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.bar {
+  background-color: #ddd;
+  height: 10px;
+  width: 100%;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.fill {
+  background-color: #f28ab2;
+  height: 100%;
+  border-radius: 5px;
+}
+
+.hobbies {
+  list-style: none;
+  padding-left: 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.hobbies li {
+  margin-right: 15px;
+  margin-bottom: 5px;
+}
+.right ul {
+  padding-left: 20px;
+  margin-bottom: 20px;
+}
+
+.right ul li {
+  margin-bottom: 10px;
+}
+.three-column {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.section-box {
+  flex: 1;
+  padding: 20px;
+  background-color: #fde7ef;
+  border-radius: 10px;
+  background-color: transparent;
+  border: none;
+  box-shadow: none;
+  padding: 0;
+}
+
+.full-width {
+  flex-basis: 100%;
+}
+
+footer {
+  text-align: center;
+  padding: 10px;
+  background-color: #f28ab2;
+  color: white;
+  margin-top: 20px;
+  position: absolute;
+  width: 100%;
+  text-align: center;
+}

@@ -1,0 +1,314 @@
+/* Reset cơ bản và font */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background: #e0f2f7; /* Light Blue Gray  */
+  color: #4682b4; /* Steel Blue - Xanh đậm hơn cho văn bản chính */
+  line-height: 1.6;
+}
+
+/* Banner */
+.banner {
+  background: #7db9de; /* Dusty Blue - Xanh trung bình, cho banner */
+  color: #e0f2f7; /* Light Blue Gray - Chữ trắng cho banner nổi bật */
+  padding: 20px;
+  text-align: center;
+  animation: bannerFadeIn 2s ease forwards; /* animation CSS3 */
+}
+
+@keyframes bannerFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Navbar */
+.navbar ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  background-color: #2c3e50; /* Dark Midnight Blue - Nền navbar màu xanh rất đậm */
+  border-radius: 5px;
+  overflow: hidden;
+  animation: navbarSlideIn 1s ease forwards; /* animation CSS3 */
+}
+
+@keyframes navbarSlideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.navbar ul li {
+  margin: 0 10px;
+}
+
+.navbar ul li a {
+  color: #e0f2f7; /* Light Blue Gray - Chữ trắng cho link navbar */
+  text-decoration: none;
+  padding: 10px 20px;
+  display: block;
+  transition: background 0.3s ease;
+  border-radius: 5px;
+}
+
+.navbar ul li a:hover {
+  background: #7db9de; /* Dusty Blue - Xanh trung bình khi hover */
+}
+
+/* Container chính dùng flex */
+.container {
+  display: flex;
+  padding: 20px;
+  gap: 20px;
+}
+
+/* Cột trái */
+.left_Side {
+  width: 35%;
+  background: #ffffff; /* Trắng tinh khiết */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Bóng đổ nhẹ, tinh tế */
+  animation: fadeInLeft 1s ease forwards; /* animation */
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Cột phải */
+.right_Side {
+  width: 65%;
+  background: #ffffff; /* Trắng tinh khiết */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Bóng đổ nhẹ, tinh tế */
+  animation: fadeInRight 1s ease forwards; /* animation */
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Ảnh cá nhân */
+.profileText .imgBx {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.profileText .imgBx img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 5px solid #7db9de; /* Dusty Blue - Viền ảnh màu xanh trung bình */
+  transition: transform 0.3s ease;
+}
+
+.profileText .imgBx img:hover {
+  transform: scale(1.05) rotate(5deg); /* hiệu ứng nhỏ khi hover */
+}
+
+/* Tên và chức danh */
+.profileText h2 {
+  text-align: center;
+  margin-top: 10px;
+  color: #2c3e50; /* Dark Midnight Blue - Màu xanh rất đậm cho tên */
+}
+
+/* Tiêu đề phần */
+.contactInfo .title,
+.about .title2 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #7db9de; /* Dusty Blue - Màu xanh trung bình cho tiêu đề */
+  border-bottom: 2px solid #b3e0f2; /* Soft Sky Blue - Đường viền nhạt hơn */
+  padding-bottom: 5px;
+}
+
+/* Danh sách liên hệ và kỹ năng */
+.contactInfo ul li {
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+}
+
+.contactInfo ul li .icon {
+  width: 30px;
+  color: #7db9de; /* Dusty Blue - Icon màu xanh */
+  text-align: center;
+  font-size: 18px;
+}
+
+.contactInfo ul li .text a {
+  color: #4682b4; /* Steel Blue - Màu xanh đậm cho link */
+  text-decoration: none;
+}
+
+.contactInfo ul li .text a:hover {
+  text-decoration: underline;
+  color: #7db9de; /* Dusty Blue - Xanh trung bình khi hover */
+}
+
+/* Thanh kỹ năng và ngôn ngữ */
+.skills .percent {
+  background: #e0f2f7; /* Light Blue Gray - Nền thanh nhạt hơn */
+  height: 6px;
+  border-radius: 5px;
+  margin-top: 5px;
+  overflow: hidden;
+  flex-grow: 1;
+  margin-left: 10px;
+}
+
+.skills .percent div {
+  height: 100%;
+  background: #7db9de; /* Dusty Blue - Thanh màu xanh trung bình */
+  animation: loadSkill 1s ease forwards;
+}
+
+@keyframes loadSkill {
+  from {
+    width: 0;
+  }
+  to {
+    width: var(--skill-width);
+  }
+}
+
+/* About sections (Mục tiêu, học vấn, kinh nghiệm, chứng chỉ, dự án) */
+.about {
+  margin-bottom: 25px;
+}
+
+.about .box {
+  margin-top: 10px;
+}
+
+.year_company {
+  display: flex;
+  justify-content: space-between;
+  color: #4682b4; /* Steel Blue - Xanh đậm cho năm và công ty */
+  font-weight: 600;
+}
+
+.year_company h5 {
+  font-size: 14px;
+}
+
+.text h4 {
+  font-size: 16px;
+  color: #2c3e50; /* Dark Midnight Blue - Xanh rất đậm cho tiêu đề chi tiết */
+  margin-bottom: 5px;
+}
+
+.text p {
+  font-size: 14px;
+  color: #4682b4; /* Steel Blue - Xanh đậm cho nội dung chi tiết */
+}
+
+/* Danh sách sở thích */
+.hobby-list {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  font-size: 16px;
+  color: #4682b4; /* Steel Blue - Xanh đậm cho chữ sở thích */
+}
+
+.hobby-list li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.hobby-list li i {
+  color: #7db9de; /* Dusty Blue - Màu xanh trung bình cho icon sở thích */
+  font-size: 20px;
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .left_Side,
+  .right_Side {
+    width: 100%;
+  }
+
+  .navbar ul {
+    flex-wrap: wrap;
+  }
+
+  .navbar ul li {
+    margin: 5px 10px;
+  }
+}
+
+/* Điều chỉnh lại cho thanh kỹ năng và ngôn ngữ để tránh trùng lặp và làm rõ hơn */
+.contactInfo.skills ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.contactInfo.skills li {
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+}
+
+.contactInfo.skills .text {
+  display: inline-block;
+  font-weight: bold;
+  margin-right: 10px;
+  min-width: 120px;
+}
+
+.contactInfo.skills .percent {
+  background: #e0f2f7; /* Light Blue Gray - Nền thanh kỹ năng */
+  border-radius: 10px;
+  height: 10px;
+  position: relative;
+  flex-grow: 1;
+  overflow: hidden;
+  margin-left: 0;
+}
+
+.contactInfo.skills .percent div {
+  background: #7db9de; /* Dusty Blue - Màu của phần trăm kỹ năng */
+  height: 100%;
+  transition: width 1s ease-in-out;
+}
